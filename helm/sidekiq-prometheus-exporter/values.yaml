@@ -22,6 +22,9 @@ image:
   # pullSecrets:
   #   - myRegistryKeySecretName
 
+metrics:
+  enabled: true
+
 ## String to partially override Values.fullname template (will maintain the release name)
 ##
 # nameOverride:
@@ -99,7 +102,10 @@ containerPort: 9292
 
 ## Metrics exporter pod Annotations
 ##
-# podAnnotations:
+podAnnotations:
+  prometheus.io/scrape: 'true'
+  prometheus.io/port: '9292'
+  prometheus.io/path: '/metrics'
 
 ## Metrics exporter Service properties
 ##

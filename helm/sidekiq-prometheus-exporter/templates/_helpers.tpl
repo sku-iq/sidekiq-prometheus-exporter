@@ -99,7 +99,7 @@ env:
 Expand common labels.
 */}}
 {{- define "sidekiq-prometheus-exporter.labels" -}}
-app.kubernetes.io/name: {{ include "sidekiq-prometheus-exporter.name" . }}
+app.kubernetes.io/name: {{ include "sidekiq-prometheus-exporter.name" . }}-sidekiq-exporter
 helm.sh/chart: {{ include "sidekiq-prometheus-exporter.chart" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- if .Chart.AppVersion }}

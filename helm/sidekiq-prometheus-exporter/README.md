@@ -16,18 +16,18 @@ NAME    URL
 strech  https://strech.github.io/sidekiq-prometheus-exporter
 ```
 
-Then you can install the chart, let's say with the release name `sidekiq-metrics`
+Then you can install the chart, let's say with the release name `sidekiq-exporter`
 
 **Helm v2**
 
 ```console
-$ helm install strech/sidekiq-prometheus-exporter --name sidekiq-metrics
+$ helm install strech/sidekiq-prometheus-exporter --name sidekiq-exporter
 ```
 
 **Helm v3**
 
 ```console
-$ helm install sidekiq-metrics strech/sidekiq-prometheus-exporter
+$ helm install sidekiq-exporter strech/sidekiq-prometheus-exporter
 ```
 
 ## Configuration
@@ -36,13 +36,13 @@ You can try out that configuration by using `--dry-run` and `--values` on
 install (examples using **Helm v3**)
 
 ```console
-$ helm install sidekiq-metrics strech/sidekiq-prometheus-exporter --values myvalues.yaml --dry-run
+$ helm install sidekiq-exporter strech/sidekiq-prometheus-exporter --values myvalues.yaml --dry-run
 ```
 
 or you can try out just one value via `--set`
 
 ```console
-$ helm install sidekiq-metrics strech/sidekiq-prometheus-exporter --set serviceAccount.create=false --dry-run
+$ helm install sidekiq-exporter strech/sidekiq-prometheus-exporter --set serviceAccount.create=false --dry-run
 ```
 
 | Parameter                      | Description                                                                                      | Default                              |
